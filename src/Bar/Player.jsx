@@ -1,7 +1,20 @@
+import {useState} from "react";
 import Control from "./Control";
 import Icons from "../Icons";
 
 function Player() {
+    const [svgClass, setSvgClass] = useState("hidden")
+    const [authorClass, setAuthorClass] = useState("player__skeleton-author")
+    const [albumClass, setAlbumClass] = useState("player__skeleton-album")
+    const [authorLinkClass, setAuthorLinkClass] = useState("hidden")
+
+    setTimeout(() => {
+        setSvgClass("track-play__svg")
+        setAuthorClass("track-play__author")
+        setAlbumClass("track-play__album")
+        setAuthorLinkClass("track-play__author-link")
+    }, 5000)
+
     return (
       <div className="bar__player player">
         <div className="player__controls">
@@ -14,13 +27,13 @@ function Player() {
         <div className="player__track-play track-play">
             <div className="track-play__contain">
                 <div className="track-play__image">
-                    <Icons className="track-play__svg" alt="music" name="note"/>
+                    <Icons className={svgClass} alt="music" name="note"/>
                 </div>
-                <div className="track-play__author">
-                    <a className="track-play__author-link" href="http://">Ты та...</a>
+                <div className={authorClass}>
+                    <a className={authorLinkClass} href="http://">Ты та...</a>
                 </div>
-                <div className="track-play__album">
-                    <a className="track-play__author-link" href="http://">Баста</a>
+                <div className={albumClass}>
+                    <a className={authorLinkClass} href="http://">Баста</a>
                 </div>
             </div>
             <div className="track-play__like-dis">
