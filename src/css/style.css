@@ -340,7 +340,7 @@ body {
   text-decoration: underline;
 }
 
-.filter__button:not(:last-child) {
+.filter__button {
   margin-right: 10px;
 }
 

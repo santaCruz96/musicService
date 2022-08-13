@@ -1,4 +1,4 @@
-import {useState} from "react";
+import {useState, useEffect} from "react";
 import Icons from "../Icons";
 
 function PlaylistItem({title, span, author, album, time}) {
@@ -11,7 +11,10 @@ function PlaylistItem({title, span, author, album, time}) {
     const [albumLinkClass, setAlbumLinkClass] = useState("hidden")
     const [timeClass, setTimeClass] = useState("hidden")
 
-    setTimeout(() => {
+
+    useEffect(
+        () => {
+       const showSkelet = setTimeout(() => {
         setTittleSvgClass("track__title-svg")
         setTittleTextClass("track__title-text")
         setTittleLinkClass("track__title-link")
@@ -20,7 +23,11 @@ function PlaylistItem({title, span, author, album, time}) {
         setAlbumClass("track__album")
         setAlbumLinkClass("track__album-link")
         setTimeClass("track__time")
-    }, 5000)
+        }, 5000)
+        return () => {
+            clearTimeout(showSkelet)
+        }
+    }, [])
     
     return (
       <div className="playlist__item">

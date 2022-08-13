@@ -1,4 +1,4 @@
-import {useState} from "react";
+import {useState, useEffect} from "react";
 import Control from "./Control";
 import Icons from "../Icons";
 
@@ -8,12 +8,18 @@ function Player() {
     const [albumClass, setAlbumClass] = useState("player__skeleton-album")
     const [authorLinkClass, setAuthorLinkClass] = useState("hidden")
 
-    setTimeout(() => {
-        setSvgClass("track-play__svg")
-        setAuthorClass("track-play__author")
-        setAlbumClass("track-play__album")
-        setAuthorLinkClass("track-play__author-link")
-    }, 5000)
+    useEffect(
+        () => {
+       const showSkelet = setTimeout(() => {
+            setSvgClass("track-play__svg")
+            setAuthorClass("track-play__author")
+            setAlbumClass("track-play__album")
+            setAuthorLinkClass("track-play__author-link")
+        }, 5000)
+        return () => {
+            clearTimeout(showSkelet)
+        }
+    }, [])
 
     return (
       <div className="bar__player player">

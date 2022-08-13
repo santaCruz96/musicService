@@ -40,7 +40,11 @@ function MainCenterblock() {
         },
       ]
     
-    const [clicked, setClicked] = useState(false)
+    const [clicked, setClicked] = useState(null)
+
+    const handleClickFilter = (id) => {
+      setClicked((prevId) => prevId === id ? null : id)
+    }
 
     return (
       <div className="main__centerblock centerblock">
@@ -55,27 +59,24 @@ function MainCenterblock() {
         <div>
           <button
             key={id}
-            onClick={() => {
-              setClicked(id)
-            }}
+            onClick={() => handleClickFilter(id)}
             className={
-              id === clicked ? 'filter__button _btn-text active' : 'filter__button _btn-text'
+              `filter__button _btn-text ${id === clicked ? 'active' : ''}`
             }
             type="button"
           >
             {filterBy}
           </button>
-          <ul
+          {id === clicked && (
+            <ul
             key={id}
-            className={
-              id === clicked
-                ? 'filter__options' : 'hidden'
-            }
+            className= "filter__options"
           >
             {options.map(({ option, optionId }) => (
               <li key={optionId} className = 'option'>{option}</li>
             ))}
           </ul>
+          )}
         </div>
       ))}
         </div>

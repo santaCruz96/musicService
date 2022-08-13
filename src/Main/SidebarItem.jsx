@@ -1,14 +1,19 @@
-import {useState} from "react";
+import {useState, useEffect} from "react";
 
 function SidebarItem({link}) {
   const [sidebarItemClass, setSidebarItemClass] = useState("skeleton__sidebar")
   const [sidebarLinkClass, setSidebarLinkClass] = useState("hidden")
 
-  
-    setTimeout(() => {
-      setSidebarItemClass("sidebar__item")
-      setSidebarLinkClass("sidebar__link")
+  useEffect(
+    () => {
+   const showSkelet = setTimeout(() => {
+    setSidebarItemClass("sidebar__item")
+    setSidebarLinkClass("sidebar__link")
     }, 5000)
+    return () => {
+        clearTimeout(showSkelet)
+    }
+    }, [])
   
 
     return (
