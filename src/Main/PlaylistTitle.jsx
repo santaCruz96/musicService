@@ -1,6 +1,8 @@
-function PlaylistTitle({className, text}) {
+import s from "./css/PlaylistTitle.module.css"
+
+function PlaylistTitle({ className, text }) {
     return (
-      <div className={`playlist-title__col ${className}`}>{text}</div>
+      <div className={`${s.playlistCol} ${className}`}>{text}</div>
     );
   }
   

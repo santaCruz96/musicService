@@ -1,7 +1,9 @@
-function MenuItem({text}) {
+import s from "./css/MenuItem.module.css"
+
+function MenuItem({ text }) {
     return (
-      <li className="menu__item">
-        <a href="http://" className="menu__link">{text}</a>
+      <li className={s.menuItem}>
+        <a href="http://" className={s.menuLink}>{text}</a>
       </li>
     );
   }

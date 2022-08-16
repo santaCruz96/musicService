@@ -2,6 +2,7 @@ import { useState } from "react";
 import PlaylistTitle from "./PlaylistTitle";
 import PlaylistItem from "./PlaylisItem";
 import Icons from "../Icons";
+import s from "./css/MainCenterblock.module.css"
 
 function MainCenterblock() {
     const filters = [
@@ -46,22 +47,24 @@ function MainCenterblock() {
       setClicked((prevId) => prevId === id ? null : id)
     }
 
+    const active = `${s.active}`
+  
     return (
-      <div className="main__centerblock centerblock">
-        <div className="centerblock__search search">
-                <Icons className="search__svg" name="search"/>
-            <input className="search__text" type="search" placeholder="Поиск" name="search"/>
+      <div className={s.centerblock}>
+        <div className={s.search}>
+                <Icons className={s.searchSvg} name="search"/>
+            <input className={s.text} type="search" placeholder="Поиск" name="search"/>
         </div>
-        <h2 className="centerblock__h2">Треки</h2>
-        <div className="centerblock__filter filter">
-            <div className="filter__title">Искать по:</div>
+        <h2 className={s.h2}>Треки</h2>
+        <div className={s.filter}>
+            <div className={s.filterTitle}>Искать по:</div>
             {filters.map(({ filterBy, id, options }) => (
         <div>
           <button
             key={id}
             onClick={() => handleClickFilter(id)}
             className={
-              `filter__button _btn-text ${id === clicked ? 'active' : ''}`
+              `${s.button} ${s.buttonText} ${id === clicked ? active : ''}`
             }
             type="button"
           >
@@ -70,26 +73,26 @@ function MainCenterblock() {
           {id === clicked && (
             <ul
             key={id}
-            className= "filter__options"
+            className= {s.options}
           >
             {options.map(({ option, optionId }) => (
-              <li key={optionId} className = 'option'>{option}</li>
+              <li key={optionId} className = {s.option}>{option}</li>
             ))}
           </ul>
           )}
         </div>
       ))}
         </div>
-        <div className="centerblock__content">
-            <div className="content__title playlist-title">
-                <PlaylistTitle className="col01" text="ТРЕК"/>
-                <PlaylistTitle className="col02" text="ИСПОЛНИТЕЛЬ"/>
-                <PlaylistTitle className="col03" text="АЛЬБОМ"/>
-                <div className="playlist-title__col col04">
-                    <Icons className="playlist-title__svg" alt="time" name="watch"/>
+        <div className={s.content}>
+            <div className={s.contentTitle}>
+                <PlaylistTitle className={s.col01} text="ТРЕК"/>
+                <PlaylistTitle className={s.col02} text="ИСПОЛНИТЕЛЬ"/>
+                <PlaylistTitle className={s.col03} text="АЛЬБОМ"/>
+            <div className={`${s.playlistCol} ${s.col04}`}>
+                    <Icons className={s.titleSvg} alt="time" name="watch"/>
                 </div>
             </div>
-            <div className="content__playlist playlist">
+            <div className={s.playlist}>
                 <PlaylistItem title="Guilt" author="Nero" album="Welcome Reality" time="4:44"/>
                 <PlaylistItem title="Elektro" author="Dynoro, Outwork, Mr. Gee" album="Elektro" time="2:22"/>
                 <PlaylistItem title="I’m Fire" author="Ali Bakgor" album="I’m Fire" time="2:22"/>

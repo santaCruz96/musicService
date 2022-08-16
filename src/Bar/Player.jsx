@@ -1,20 +1,21 @@
 import {useState, useEffect} from "react";
 import Control from "./Control";
 import Icons from "../Icons";
+import s from "./css/Player.module.css"
 
 function Player() {
-    const [svgClass, setSvgClass] = useState("hidden")
-    const [authorClass, setAuthorClass] = useState("player__skeleton-author")
-    const [albumClass, setAlbumClass] = useState("player__skeleton-album")
-    const [authorLinkClass, setAuthorLinkClass] = useState("hidden")
+    const [svgClass, setSvgClass] = useState(`${s.hidden}`)
+    const [authorClass, setAuthorClass] = useState(`${s.skeletonAuthor}`)
+    const [albumClass, setAlbumClass] = useState(`${s.skeletonAlbum}`)
+    const [authorLinkClass, setAuthorLinkClass] = useState(`${s.hidden}`)
 
     useEffect(
         () => {
        const showSkelet = setTimeout(() => {
-            setSvgClass("track-play__svg")
-            setAuthorClass("track-play__author")
-            setAlbumClass("track-play__album")
-            setAuthorLinkClass("track-play__author-link")
+            setSvgClass(`${s.trackPlaySvg}`)
+            setAuthorClass(`${s.author}`)
+            setAlbumClass(`${s.album}`)
+            setAuthorLinkClass(`${s.authorLink}`)
         }, 5000)
         return () => {
             clearTimeout(showSkelet)
@@ -22,17 +23,17 @@ function Player() {
     }, [])
 
     return (
-      <div className="bar__player player">
-        <div className="player__controls">
-            <Control className="player__btn-prev" secondClassName="" name="prev"/>
-            <Control className="player__btn-play" secondClassName="_btn" name="play"/>
-            <Control className="player__btn-next" secondClassName="" name="next"/>
-            <Control className="player__btn-repeat" secondClassName="_btn-icon" name="repeat"/>
-            <Control className="player__btn-shuffle" secondClassName="_btn-icon" name="shuffle"/>
+      <div className={s.player}>
+        <div className={s.controls}>
+            <Control className={s.prev} svgClass={s.prevSvg} secondClassName={s.btn} name="prev"/>
+            <Control className={s.play} svgClass={s.playSvg} secondClassName={s.btn} name="play"/>
+            <Control className={s.next} svgClass={s.nextSvg} secondClassName={s.btn} name="next"/>
+            <Control className={s.repeat} svgClass={s.repeatSvg} secondClassName={s.btnIcon} name="repeat"/>
+            <Control className={s.shuffle} svgClass={s.shuffleSvg} secondClassName={s.btnIcon} name="shuffle"/>
         </div>
-        <div className="player__track-play track-play">
-            <div className="track-play__contain">
-                <div className="track-play__image">
+        <div className={s.trackPlay}>
+            <div className={s.contain}>
+                <div className={s.playImage}>
                     <Icons className={svgClass} alt="music" name="note"/>
                 </div>
                 <div className={authorClass}>
@@ -42,9 +43,9 @@ function Player() {
                     <a className={authorLinkClass} href="http://">Баста</a>
                 </div>
             </div>
-            <div className="track-play__like-dis">
-                <Control className="track-play__like" secondClassName="_btn-icon" name="like"/>
-                <Control className="track-play__dislike" secondClassName="_btn-icon" name="dislike"/>
+            <div className={s.likeDis}>
+                <Control className={s.like} svgClass={s.likeSvg} secondClassName={s.btnIcon} name="like"/>
+                <Control className={s.dislike} svgClass={s.dislikeSvg} secondClassName={s.btnIcon} name="dislike"/>
             </div>
         </div>
       </div>

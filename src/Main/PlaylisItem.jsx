@@ -1,27 +1,28 @@
 import {useState, useEffect} from "react";
 import Icons from "../Icons";
+import s from "./css/PlaylistItem.module.css"
 
 function PlaylistItem({title, span, author, album, time}) {
-    const [tittleSvgClass, setTittleSvgClass] = useState("hidden")
-    const [tittleTextClass, setTittleTextClass] = useState("skeleton__text")
-    const [tittleLinkClass, setTittleLinkClass] = useState("hidden")
-    const [authorClass, setAuthorClass] = useState("skeleton__author")
-    const [authorLinkClass, setAuthorLinkClass] = useState("hidden")
-    const [albumClass, setAlbumClass] = useState("skeleton__album")
-    const [albumLinkClass, setAlbumLinkClass] = useState("hidden")
-    const [timeClass, setTimeClass] = useState("hidden")
+    const [tittleSvgClass, setTittleSvgClass] = useState(`${s.hidden}`)
+    const [tittleTextClass, setTittleTextClass] = useState(`${s.skeletonText}`)
+    const [tittleLinkClass, setTittleLinkClass] = useState(`${s.hidden}`)
+    const [authorClass, setAuthorClass] = useState(`${s.skeletonAuthor}`)
+    const [authorLinkClass, setAuthorLinkClass] = useState(`${s.hidden}`)
+    const [albumClass, setAlbumClass] = useState(`${s.skeletonAlbum}`)
+    const [albumLinkClass, setAlbumLinkClass] = useState(`${s.hidden}`)
+    const [timeClass, setTimeClass] = useState(`${s.hidden}`)
 
 
     useEffect(
         () => {
        const showSkelet = setTimeout(() => {
-        setTittleSvgClass("track__title-svg")
+        setTittleSvgClass(`${s.titleSvg}`)
         setTittleTextClass("track__title-text")
-        setTittleLinkClass("track__title-link")
-        setAuthorClass("track__author")
-        setAuthorLinkClass("track__author-link")
-        setAlbumClass("track__album")
-        setAlbumLinkClass("track__album-link")
+        setTittleLinkClass(`${s.titleLink}`)
+        setAuthorClass(`${s.author}`)
+        setAuthorLinkClass(`${s.authorLink}`)
+        setAlbumClass(`${s.album}`)
+        setAlbumLinkClass(`${s.albumLink}`)
         setTimeClass("track__time")
         }, 5000)
         return () => {
@@ -30,16 +31,16 @@ function PlaylistItem({title, span, author, album, time}) {
     }, [])
     
     return (
-      <div className="playlist__item">
-        <div className="playlist__track track">
-            <div className="track__title">
-                <div className="track__title-image">
+      <div className={s.item}>
+        <div className={s.track}>
+            <div className={s.title}>
+                <div className={s.trackImage}>
                         <Icons className={tittleSvgClass} alt="music" name="note"/>
                 </div>
                 <div className={tittleTextClass}>
                     <a className={tittleLinkClass} href="http://">
                         {title}
-                        <span className="track__title-span">{span}</span>
+                        <span className={s.trackSpan}>{span}</span>
                     </a>
                 </div>
             </div>
@@ -50,8 +51,8 @@ function PlaylistItem({title, span, author, album, time}) {
                 <a className={albumLinkClass} href="http://">{album}</a>
             </div>
             <div className={timeClass}>
-                    <Icons className="track__time-svg" alt="time" name="like"/>
-                <span className="track__time-text">{time}</span>
+                    <Icons className={s.timeSvg} alt="time" name="like"/>
+                <span className={s.timeText}>{time}</span>
             </div>
         </div>
       </div>

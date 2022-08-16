@@ -1,14 +1,15 @@
 import Icons from "../Icons";
+import s from "./css/Volume.module.css"
 
 function Volume() {
     return (
-        <div className="bar__volume-block volume">
-            <div className="volume__content">
-                <div className="volume__image">
-                    <Icons className="volume__svg" alt="volume" name="volume"/>
+        <div className={s.volume}>
+            <div className={s.content}>
+                <div className={s.image}>
+                    <Icons className={s.volumeSvg} alt="volume" name="volume"/>
                 </div>
-                <div className="volume__progress-line _btn">
-                    <input className="volume__progress-line _btn" type="range" name="range"/>
+                <div className={`${s.progressLine} ${s.btn}`}>
+                    <input className={`${s.progressLine} ${s.btn}`} type="range" name="range"/>
                 </div>
             </div>
         </div>

@@ -1,9 +1,9 @@
 import Icons from "../Icons";
 
-function Control({className, name, secondClassName}) {
+function Control({className, svgClass, name, secondClassName}) {
     return (
       <div className={`${className} ${secondClassName}`}>
-        <Icons className={`${className}-svg`} alt={name} name={name}/>
+        <Icons className={svgClass} alt={name} name={name}/>
       </div>
     );
   }

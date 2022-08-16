@@ -1,12 +1,13 @@
 import Player from "./Player";
 import Volume from "./Volume";
+import s from "./css/Bar.module.css"
 
 function Bar() {
     return (
-      <div className="bar">
-        <div className="bar__content">
-          <div className="bar__player-progress"/>
-          <div className="bar__player-block">
+      <div className={s.bar}>
+        <div className={s.content}>
+          <div className={s.progress}/>
+          <div className={s.block}>
             <Player/>
             <Volume/>
           </div>
