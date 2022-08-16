@@ -1,6 +1,6 @@
-import Main from "./Main";
-import Bar from "./Bar";
-import Footer from "./Footer";
+import Main from "./Main/Main";
+import Bar from "./Bar/Bar";
+import Footer from "./Footer/Footer";
 
 function Container() {
     return (

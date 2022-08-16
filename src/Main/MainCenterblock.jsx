@@ -1,9 +1,51 @@
-import FilterButton from "./FilterButton";
+import { useState } from "react";
 import PlaylistTitle from "./PlaylistTitle";
 import PlaylistItem from "./PlaylisItem";
 import Icons from "../Icons";
 
 function MainCenterblock() {
+    const filters = [
+        {
+          filterBy: 'исполнителю',
+          id: 1,
+          options: [
+            { option: 'Michael Jackson', optionId: 1 },
+            { option: 'Frank Sinantra', optionId: 2 },
+            { option: 'Arctic Monkeys', optionId: 3 },
+            { option: 'Calvin Harris', optionId: 4 },
+            { option: 'Zhu', optionId: 5 },
+          ],
+        },
+        {
+          filterBy: 'году выпуска',
+          id: 2,
+          options: [
+            { option: 2022, optionId: 1 },
+            { option: 2021, optionId: 2 },
+            { option: 2020, optionId: 3 },
+            { option: 2019, optionId: 4 },
+            { option: 2018, optionId: 5 },
+          ],
+        },
+        {
+          filterBy: 'жанру',
+          id: 3,
+          options: [
+            { option: 'Рок', optionId: 1 },
+            { option: 'Хип-хоп', optionId: 2 },
+            { option: 'Поп-музыка', optionId: 3 },
+            { option: 'Техно', optionId: 4 },
+            { option: 'Инди', optionId: 5 },
+          ],
+        },
+      ]
+    
+    const [clicked, setClicked] = useState(null)
+
+    const handleClickFilter = (id) => {
+      setClicked((prevId) => prevId === id ? null : id)
+    }
+
     return (
       <div className="main__centerblock centerblock">
         <div className="centerblock__search search">
@@ -13,9 +55,30 @@ function MainCenterblock() {
         <h2 className="centerblock__h2">Треки</h2>
         <div className="centerblock__filter filter">
             <div className="filter__title">Искать по:</div>
-            <FilterButton className="author" text="исполнителю"/>
-            <FilterButton className="year" text="году выпуска"/>
-            <FilterButton className="genre" text="жанру"/>
+            {filters.map(({ filterBy, id, options }) => (
+        <div>
+          <button
+            key={id}
+            onClick={() => handleClickFilter(id)}
+            className={
+              `filter__button _btn-text ${id === clicked ? 'active' : ''}`
+            }
+            type="button"
+          >
+            {filterBy}
+          </button>
+          {id === clicked && (
+            <ul
+            key={id}
+            className= "filter__options"
+          >
+            {options.map(({ option, optionId }) => (
+              <li key={optionId} className = 'option'>{option}</li>
+            ))}
+          </ul>
+          )}
+        </div>
+      ))}
         </div>
         <div className="centerblock__content">
             <div className="content__title playlist-title">
@@ -43,4 +106,4 @@ function MainCenterblock() {
     );
 }
   
-export default MainCenterblock;
+export default MainCenterblock; 
