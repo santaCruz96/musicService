@@ -2,32 +2,33 @@ import {useState} from "react";
 import BurgerLine from "./BurgerLine";
 import MenuItem from "./MenuItem";
 import logo from "../img/logo.png"
+import s from "./css/MainNav.module.css"
 
 function MainNav() {
-    const [menuClass, setMenuClass] = useState("hidden")
+    const [menuClass, setMenuClass] = useState(`${s.hidden}`)
     const [isMenuClicked, setIsMenuClicked] = useState(false)
 
     const updateMenu = () => {
       if(!isMenuClicked) {
-          setMenuClass("menu__list")
+          setMenuClass(`${s.menuList}`)
       }
       else {
-          setMenuClass("hidden")
+          setMenuClass(`${s.hidden}`)
       }
       setIsMenuClicked(!isMenuClicked)
     }
     
     return (
-      <nav className="main__nav nav">
-        <div className="nav__logo logo">
-          <img className="logo__image" src={logo} alt="logo"/>
+      <nav className={s.nav}>
+        <div className={s.logo}>
+          <img className={s.image} src={logo} alt="logo"/>
         </div>
-        <div className="nav__burger burger" role="presentation" onClick={updateMenu}> 
+        <div className={s.burger} role="presentation" onClick={updateMenu}> 
           <BurgerLine/>
           <BurgerLine/>
           <BurgerLine/>
         </div>
-        <div className="nav__menu menu">
+        <div className={s.menu}>
           <ul className={menuClass}>
             <MenuItem text="Главное"/>
             <MenuItem text="Мой плейлист"/>

@@ -1,6 +1,8 @@
+import s from "./css/BurgerLine.module.css"
+
 function BurgerLine() {
     return (
-      <span className="burger__line" />
+      <span className={s.burgerLine} />
     );
 }
   

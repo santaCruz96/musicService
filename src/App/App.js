@@ -1,9 +1,9 @@
 import Container from "./Container";
-import "./css/style.css"
+import s from "./css/App.module.css"
 
 function App() {
   return (
-    <div className="wrapper">
+    <div className={s.wrapper}>
     <Container/>
     </div>
   );
