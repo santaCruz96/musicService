@@ -3,6 +3,13 @@
         "browser": true,
         "es2021": true
     },
+    "no-shadow": [
+        "error", 
+        { "builtinGlobals": false, 
+        "hoist": "functions", 
+        "allow": [], 
+        "ignoreOnInitialization": false }
+    ],
     "extends": [
         "plugin:react/recommended",
         "airbnb",
