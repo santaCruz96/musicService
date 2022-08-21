@@ -1,10 +1,13 @@
-import Container from "./Container";
-import s from "./css/App.module.css"
+import AppRoutes from "../routes";
+import style from "./App.module.css";
 
 function App() {
+
+  const cookieValue = document.cookie.replace(/(?:(?:^|.*;\s*)token\s*=\s*([^;]*).*$)|^.*$/, "$1");
+
   return (
-    <div className={s.wrapper}>
-    <Container/>
+    <div className={style.wrapper}>
+      <AppRoutes user={cookieValue}/>
     </div>
   );
 }
