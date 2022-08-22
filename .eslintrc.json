@@ -3,13 +3,6 @@
         "browser": true,
         "es2021": true
     },
-    "no-shadow": [
-        "error", 
-        { "builtinGlobals": false, 
-        "hoist": "functions", 
-        "allow": [], 
-        "ignoreOnInitialization": false }
-    ],
     "extends": [
         "plugin:react/recommended",
         "airbnb",
@@ -27,6 +20,12 @@
         "react"
     ],
     "rules": {
+        "no-shadow": "off",
+        "jsx-a11y/media-has-caption": [ 2, {
+            "audio": [ "Audio" ],
+            "video": [ "Video" ],
+            "track": [ "Track" ]
+        }],
         "react/jsx-filename-extension": [
             1,
             {
