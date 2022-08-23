@@ -3,7 +3,7 @@ import Control from "../control/Control";
 import Icons from "../../icons/Icons";
 import style from "./Player.module.css"
 
-function Player() {
+function Player({isPlaying, setIsPlaying}) {
     const [svgClass, setSvgClass] = useState(`${style.hidden}`)
     const [authorClass, setAuthorClass] = useState(`${style.skeletonAuthor}`)
     const [albumClass, setAlbumClass] = useState(`${style.skeletonAlbum}`)
@@ -20,13 +20,18 @@ function Player() {
         return () => {
             clearTimeout(showSkelet)
         }
-    }, [])
+        }, [])
+    
+    const PlayPause = () => {
+        setIsPlaying(!isPlaying);
+    }
 
     return (
       <div className={style.player}>
         <div className={style.controls}>
             <Control className={style.prev} svgClass={style.prevSvg} secondClassName={style.btn} name="prev"/>
-            <Control className={style.play} svgClass={style.playSvg} secondClassName={style.btn} name="play"/>
+            {isPlaying ? <Control onClick={PlayPause} className={style.play} svgClass={style.pauseSvg} secondClassName={style.btn} name="pause" /> :
+            <Control onClick={PlayPause} className={style.play} svgClass={style.playSvg} secondClassName={style.btn} name="play"/>}
             <Control className={style.next} svgClass={style.nextSvg} secondClassName={style.btn} name="next"/>
             <Control className={style.repeat} svgClass={style.repeatSvg} secondClassName={style.btnIcon} name="repeat"/>
             <Control className={style.shuffle} svgClass={style.shuffleSvg} secondClassName={style.btnIcon} name="shuffle"/>
