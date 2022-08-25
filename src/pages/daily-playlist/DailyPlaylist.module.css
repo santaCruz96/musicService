@@ -12,11 +12,28 @@
     align-items: center;
 }
 
+.searchLight {
+    width: 100%;
+    border-bottom: 1px solid #D9D9D9;
+    margin-bottom: 51px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
 .searchSvg {
     width: 17px;
     height: 17px;
     margin-right: 5px;
     stroke: #FFFFFF;
+    fill: transparent;
+}
+
+.searchSvgLight {
+    width: 17px;
+    height: 17px;
+    margin-right: 5px;
+    stroke: #000000;
     fill: transparent;
 }
 
@@ -41,6 +58,27 @@
     line-height: 24px;
 }
 
+.textLight {
+    flex-grow: 100;
+    background-color: transparent;
+    border: none;
+    padding: 13px 10px 14px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+}
+
+.textLight::placeholder {
+    background-color: transparent;
+    color: #000000;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+
 .h2 {
     font-style: normal;
     font-weight: 400;
@@ -48,6 +86,16 @@
     line-height: 72px;
     letter-spacing: -0.8px;
     margin-bottom: 45px;
+}
+
+.h2Light {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 72px;
+    letter-spacing: -0.8px;
+    margin-bottom: 45px;
+    color: #000000;
 }
 
 .filter {
@@ -65,6 +113,15 @@
     margin-right: 15px;
 }
 
+.filterTitleLight {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    margin-right: 15px;
+    color: #000000;
+}
+
 .button {
     font-family: inherit;
     font-style: normal;
@@ -74,6 +131,20 @@
     font-size: 16px;
     line-height: 24px;
     border: 1px solid #FFFFFF;
+    border-radius: 60px;
+    padding: 6px 20px;
+    margin-right: 10px;
+}
+
+.buttonLight {
+    font-family: inherit;
+    font-style: normal;
+    background: none;
+    color: #000000;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    border: 1px solid #000000;
     border-radius: 60px;
     padding: 6px 20px;
     margin-right: 10px;
@@ -111,11 +182,43 @@
     max-width: 424px;
 }
 
+.optionsLight {
+    margin-top: 17px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 2px;
+    padding-bottom: 10px;
+    position: absolute;
+    border-radius: 12px;
+    background-color: #F6F4F4;
+    max-width: 424px;
+}
+
 .option {
     cursor: pointer;
     padding-right: 28px;
     padding-bottom: 20px;
     font-size: 20px;
+}
+
+.optionLight {
+    cursor: pointer;
+    padding-right: 28px;
+    padding-bottom: 20px;
+    font-size: 20px;
+    color: #000000;
+}
+
+.option:hover {
+    text-decoration-line: underline;
+    color: #AD61FF;
+}
+
+.optionLight:hover {
+    text-decoration-line: underline;
+    color: #AD61FF;
 }
 
 .content {
@@ -138,6 +241,16 @@
     line-height: 24px;
     letter-spacing: 2px;
     color: #696969;
+    text-transform: uppercase;
+}
+
+.playlistColLight {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 2px;
+    color: #b1b1b1;
     text-transform: uppercase;
 }
 

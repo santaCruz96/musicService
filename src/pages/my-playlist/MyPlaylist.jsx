@@ -4,8 +4,11 @@ import PlaylistItem from "../../components/Main/playlist-item/PlaylisItem";
 import Icons from "../../components/icons/Icons";
 import FILTERS from "../../constants/filters";
 import style from "./MyPlaylist.module.css"
+import useTheme from "../../components/context-hook/UseTheme";
 
 function MainCenterblock() {
+
+    const {isLight} = useTheme()
     
     const [clicked, setClicked] = useState(null)
 
@@ -17,20 +20,21 @@ function MainCenterblock() {
   
     return (
       <div className={style.centerblock}>
-        <div className={style.search}>
-                <Icons className={style.searchSvg} name="search"/>
-            <input className={style.text} type="search" placeholder="Поиск" name="search"/>
+        <div className={isLight ? style.searchLight : style.search}>
+                <Icons className={isLight ? style.searchSvgLight : style.searchSvg} name="search"/>
+            <input className={isLight ? style.textLight : style.text} type="search" placeholder="Поиск" name="search"/>
         </div>
-        <h2 className={style.h2}>Мои Треки</h2>
+        <h2 className={isLight ? style.h2Light : style.h2}>Мои Треки</h2>
         <div className={style.filter}>
-            <div className={style.filterTitle}>Искать по:</div>
+            <div className={isLight ? style.filterTitleLight : style.filterTitle}>Искать по:</div>
             {FILTERS.map(({ filterBy, id, options }) => (
         <div>
           <button
             key={id}
             onClick={() => handleClickFilter(id)}
             className={
-              `${style.button} ${style.buttonText} ${id === clicked ? active : ''}`
+              isLight ? `${style.buttonLight} ${style.buttonText} ${id === clicked ? active : ''}` :
+                        `${style.button} ${style.buttonText} ${id === clicked ? active : ''}` 
             }
             type="button"
           >
@@ -39,10 +43,10 @@ function MainCenterblock() {
           {id === clicked && (
             <ul
             key={id}
-            className= {style.options}
+            className= {isLight ? style.optionsLight : style.options}
           >
             {options.map(({ option, optionId }) => (
-              <li key={optionId} className = {style.option}>{option}</li>
+              <li key={optionId} className = {isLight ? style.optionLight : style.option}>{option}</li>
             ))}
           </ul>
           )}
@@ -54,7 +58,7 @@ function MainCenterblock() {
                 <PlaylistTitle className={style.col01} text="ТРЕК"/>
                 <PlaylistTitle className={style.col02} text="ИСПОЛНИТЕЛЬ"/>
                 <PlaylistTitle className={style.col03} text="АЛЬБОМ"/>
-            <div className={`${style.playlistCol} ${style.col04}`}>
+            <div className={isLight ? `${style.playlistColLight} ${style.col04}` : `${style.playlistCol} ${style.col04}`}>
                     <Icons className={style.titleSvg} alt="time" name="watch"/>
                 </div>
             </div>

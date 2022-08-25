@@ -8,6 +8,12 @@
     padding: 20px 0 20px 36px;
 }
 
+.navLight {
+    width: 244px;
+    background-color: #F6F5F3;
+    padding: 20px 0 20px 36px;
+}
+
 .logo {
     width: 113.33px;
     height: 43px;
@@ -39,4 +45,10 @@
 
 .menuList {
     padding: 18px 0 10px 0;
+}
+
+.themeSvg {
+    width: 39px;
+    height: 40px;
+    cursor: pointer;
 }
