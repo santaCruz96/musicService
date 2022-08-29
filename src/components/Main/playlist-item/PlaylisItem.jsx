@@ -1,8 +1,10 @@
 import {useState, useEffect} from "react";
 import Icons from "../../icons/Icons";
 import style from "./PlaylistItem.module.css"
+import useTheme from "../../context-hook/UseTheme";
 
-function PlaylistItem({title, span, author, album, time}) {
+function PlaylistItem({ title, span, author, album, time }) {
+    const {isLight} = useTheme()
     const [tittleSvgClass, setTittleSvgClass] = useState(`${style.hidden}`)
     const [tittleTextClass, setTittleTextClass] = useState(`${style.skeletonText}`)
     const [tittleLinkClass, setTittleLinkClass] = useState(`${style.hidden}`)
@@ -34,25 +36,25 @@ function PlaylistItem({title, span, author, album, time}) {
       <div className={style.item}>
         <div className={style.track}>
             <div className={style.title}>
-                <div className={style.trackImage}>
+                <div className={isLight ? style.trackImageLight : style.trackImage}>
                         <Icons className={tittleSvgClass} alt="music" name="note"/>
                 </div>
                 <div className={tittleTextClass}>
-                    <a className={tittleLinkClass} href="http://">
+                        <a className={isLight ? style.titleLinkLight : tittleLinkClass} href="http://">
                         {title}
-                        <span className={style.trackSpan}>{span}</span>
+                        <span className={isLight ? style.trackSpanLight : style.trackSpan}>{span}</span>
                     </a>
                 </div>
             </div>
             <div className={authorClass}>
-                <a className={authorLinkClass} href="http://">{author}</a>
+                <a className={isLight ? style.authorLinkLight : authorLinkClass} href="http://">{author}</a>
             </div>
             <div className={albumClass}>
-                <a className={albumLinkClass} href="http://">{album}</a>
+                <a className={isLight ? style.albumLinkLight : albumLinkClass} href="http://">{album}</a>
             </div>
             <div className={timeClass}>
                     <Icons className={style.timeSvg} alt="time" name="like"/>
-                <span className={style.timeText}>{time}</span>
+                <span className={isLight ? style.timeTextLight : style.timeText}>{time}</span>
             </div>
         </div>
       </div>

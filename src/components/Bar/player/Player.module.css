@@ -34,6 +34,15 @@
     white-space: nowrap;
 }
 
+.authorLinkLight {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+    white-space: nowrap;
+}
+
 .player {
     display: flex;
     flex-direction: row;
@@ -156,6 +165,17 @@
     width: 51px;
     height: 51px;
     background-color: #313131;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 12px;
+    grid-area: image;
+}
+
+.playImageLight {
+    width: 51px;
+    height: 51px;
+    background-color: #F6F4F4;
     display: flex;
     align-items: center;
     justify-content: center;

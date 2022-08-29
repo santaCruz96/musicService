@@ -7,3 +7,13 @@
     color: #696969;
     text-transform: uppercase;
 }
+
+.playlistColLight {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 2px;
+    color: #B1B1B1;
+    text-transform: uppercase;
+}

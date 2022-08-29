@@ -4,9 +4,11 @@ import PlaylistItem from "../playlist-item/PlaylisItem";
 import Icons from "../../icons/Icons";
 import FILTERS from "../../../constants/filters";
 import style from "./Centerblock.module.css"
+import useTheme from "../../context-hook/UseTheme";
 
 function Centerblock() {
-    
+    const {isLight} = useTheme()  
+
     const [clicked, setClicked] = useState(null)
 
     const handleClickFilter = (id) => {
@@ -17,20 +19,21 @@ function Centerblock() {
   
     return (
       <div className={style.centerblock}>
-        <div className={style.search}>
+        <div className={isLight ? style.searchLight : style.search}>
                 <Icons className={style.searchSvg} name="search"/>
-            <input className={style.text} type="search" placeholder="Поиск" name="search"/>
+            <input className={isLight ? style.textLight : style.text} type="search" placeholder="Поиск" name="search"/>
         </div>
-        <h2 className={style.h2}>Треки</h2>
+        <h2 className={isLight ? style.h2Light : style.h2}>Треки</h2>
         <div className={style.filter}>
-            <div className={style.filterTitle}>Искать по:</div>
+            <div className={isLight ? style.filterTitleLight : style.filterTitle}>Искать по:</div>
             {FILTERS.map(({ filterBy, id, options }) => (
         <div>
           <button
             key={id}
             onClick={() => handleClickFilter(id)}
             className={
-              `${style.button} ${style.buttonText} ${id === clicked ? active : ''}`
+              isLight ? `${style.buttonLight} ${style.buttonText} ${id === clicked ? active : ''}` :
+                        `${style.button} ${style.buttonText} ${id === clicked ? active : ''}` 
             }
             type="button"
           >
@@ -39,10 +42,10 @@ function Centerblock() {
           {id === clicked && (
             <ul
             key={id}
-            className= {style.options}
+            className= {isLight ? style.optionsLight : style.options}
           >
             {options.map(({ option, optionId }) => (
-              <li key={optionId} className = {style.option}>{option}</li>
+              <li key={optionId} className = {isLight ? style.optionLight : style.option}>{option}</li>
             ))}
           </ul>
           )}
@@ -54,7 +57,7 @@ function Centerblock() {
                 <PlaylistTitle className={style.col01} text="ТРЕК"/>
                 <PlaylistTitle className={style.col02} text="ИСПОЛНИТЕЛЬ"/>
                 <PlaylistTitle className={style.col03} text="АЛЬБОМ"/>
-            <div className={`${style.playlistCol} ${style.col04}`}>
+            <div className={isLight ? `${style.playlistColLight} ${style.col04}` : `${style.playlistCol} ${style.col04}`}>
                     <Icons className={style.titleSvg} alt="time" name="watch"/>
                 </div>
             </div>

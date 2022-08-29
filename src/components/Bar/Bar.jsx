@@ -2,8 +2,10 @@ import { useRef, useState, useEffect } from "react";
 import Player from "./player/Player";
 import Volume from "./volume/Volume";
 import style from "./Bar.module.css";
+import useTheme from "../context-hook/UseTheme";
 
 function Bar() {
+  const {isLight} = useTheme()
   const [isPlaying, setIsPlaying] = useState(false)
   const [songProgress, setSongProgress] = useState(0)
   const [songLength, setSongLength] = useState(0)
@@ -40,10 +42,10 @@ function Bar() {
   const publicURL = process.env.PUBLIC_URL
 
     return (
-      <div className={style.bar}>
+      <div className={isLight ? style.barLight : style.bar}>
         <div className={style.content}>
           <audio src={`${publicURL}/Bobby_Marleni_-_Dropin.mp3`} ref={audioElem} onTimeUpdate={onPlaying}><track kind="captions"/></audio>
-          <div className={style.progress} ref={clickRef} role="presentation" onClick={checkWidth}>
+          <div className={isLight ? style.progressLight : style.progress} ref={clickRef} role="presentation" onClick={checkWidth}>
             <div className={style.progressLine} style={{width: `${`${songProgress}%`}`}} />
           </div>
           <div className={style.block}>

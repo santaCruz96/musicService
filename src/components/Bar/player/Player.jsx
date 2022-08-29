@@ -2,8 +2,10 @@ import {useState, useEffect} from "react";
 import Control from "../control/Control";
 import Icons from "../../icons/Icons";
 import style from "./Player.module.css"
+import useTheme from "../../context-hook/UseTheme";
 
-function Player({isPlaying, setIsPlaying}) {
+function Player({ isPlaying, setIsPlaying }) {
+    const {isLight} = useTheme()
     const [svgClass, setSvgClass] = useState(`${style.hidden}`)
     const [authorClass, setAuthorClass] = useState(`${style.skeletonAuthor}`)
     const [albumClass, setAlbumClass] = useState(`${style.skeletonAlbum}`)
@@ -38,14 +40,14 @@ function Player({isPlaying, setIsPlaying}) {
         </div>
         <div className={style.trackPlay}>
             <div className={style.contain}>
-                <div className={style.playImage}>
+                <div className={isLight ? style.playImageLight : style.playImage}>
                     <Icons className={svgClass} alt="music" name="note"/>
                 </div>
                 <div className={authorClass}>
-                    <a className={authorLinkClass} href="http://">Ты та...</a>
+                    <a className={isLight ? style.authorLinkLight : authorLinkClass} href="http://">Ты та...</a>
                 </div>
                 <div className={albumClass}>
-                    <a className={authorLinkClass} href="http://">Баста</a>
+                    <a className={isLight ? style.authorLinkLight : authorLinkClass} href="http://">Баста</a>
                 </div>
             </div>
             <div className={style.likeDis}>

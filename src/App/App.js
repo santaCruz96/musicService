@@ -1,4 +1,5 @@
 import AppRoutes from "../routes";
+import ThemeProvider from "../components/contexts/ThemeProvider";
 import style from "./App.module.css";
 
 function App() {
@@ -7,7 +8,9 @@ function App() {
 
   return (
     <div className={style.wrapper}>
-      <AppRoutes user={cookieValue}/>
+      <ThemeProvider>
+        <AppRoutes user={cookieValue}/>
+      </ThemeProvider>
     </div>
   );
 }

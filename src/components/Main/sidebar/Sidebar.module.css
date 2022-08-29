@@ -20,6 +20,15 @@
     margin-right: 16px;
 }
 
+.personalNameLight {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+    margin-right: 16px;
+}
+
 .avatar {
     width: 43px;
     height: 43px;
