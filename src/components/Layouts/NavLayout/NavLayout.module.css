@@ -1,0 +1,33 @@
+.LayoutWrapper {
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+    background-color: #383838;
+    transition: background-color 0.5s ease;
+}
+.LayoutWrapperLight {
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+    background-color: #ffffff;
+    transition: background-color 0.5s ease;
+}
+
+.LayoutContainer {
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+    position: relative;
+    background-color: #181818;
+    overflow: hidden;
+    transition: background-color 0.5s ease;
+}
+.LayoutContainerLight {
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+    position: relative;
+    background-color: #ffffff;
+    overflow: hidden;
+    transition: background-color 0.5s ease;
+}

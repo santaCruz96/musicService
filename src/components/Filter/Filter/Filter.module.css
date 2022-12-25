@@ -1,0 +1,126 @@
+.FilterWrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 51px;
+}
+
+.FilterTitle{ 
+    margin-right: 15px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #ffffff;
+}
+.FilterTitleLight{ 
+    margin-right: 15px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+}
+
+.ButtonWrapper{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px
+}
+.ButtonWrapper:not(:last-child) {
+    margin-right: 10px;
+}
+
+
+.AuthorWrapper, .GenreWrapper {
+    display: none;
+    position: absolute;
+    z-index: 20;
+    top: 50px;
+    width: 248px;
+    height: 305px;
+    padding: 34px;
+    border: 1px #313131 solid;
+    background: #313131;
+    border-radius: 12px;
+}
+
+.AuthorWrapperLight, .GenreWrapperLight {
+    display: none;
+    position: absolute;
+    z-index: 20;
+    top: 50px;
+    width: 248px;
+    height: 305px;
+    padding: 34px;
+    border: 1px #F6F4F4 solid;
+    background: #F6F4F4;
+    border-radius: 12px;
+}
+
+.YearWrapper {
+    display: none;
+    position: absolute;
+    z-index: 20;
+    top: 50px;
+    padding: 34px;
+    width: 403px;
+    background: #313131;
+    border-radius: 12px;
+    border: 1px #313131 solid;
+}
+.YearWrapperLight {
+    display: none;
+    position: absolute;
+    z-index: 20;
+    top: 50px;
+    padding: 34px;
+    width: 403px;
+    background: #F6F4F4;
+    border-radius: 12px;
+    border: 1px #F6F4F4 solid;
+}
+
+.FilterItems {
+    max-height: 237px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 28px;
+    background: transparent;
+    overflow-y: scroll;
+}.FilterItemsLight {
+    max-height: 237px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 28px;
+    background: transparent;
+    overflow-y: scroll;
+}
+.FilterItems::-webkit-scrollbar {
+    width: 4px;
+    height: 237px;
+    background: #4b4949;
+    border-radius: 10px;
+}.FilterItemsLight::-webkit-scrollbar {
+    width: 4px;
+    height: 237px;
+    background: #bfbebe;
+    border-radius: 10px;
+}
+.FilterItems::-webkit-scrollbar-thumb {
+    width: 4px;
+    height: 65px;
+    background: #ffffff;
+    border-radius: 10px;
+}
+.FilterItemsLight::-webkit-scrollbar-thumb {
+    width: 4px;
+    height: 65px;
+    background: #000000;
+    border-radius: 10px;
+}

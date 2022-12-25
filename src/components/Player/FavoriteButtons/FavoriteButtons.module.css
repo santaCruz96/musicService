@@ -1,0 +1,58 @@
+.Wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 26%;
+}
+
+.LikeButton {
+    padding: 5px;
+    fill: transparent;
+    stroke: #696969;
+    cursor: pointer;
+}
+.DislikeButton {
+    fill: transparent;
+    stroke: #696969;
+    cursor: pointer;
+}
+
+.LikeIconWrapper {
+    width: 14px;
+    height: 12px;
+    color: #696969;
+}
+.LikeIconWrapper:active {
+    fill: #696969;
+    cursor: pointer;
+    color: #696969;
+    }
+.LikeIconWrapper:hover {
+    cursor: pointer;
+    stroke: #ffffff;
+}
+.LikeIcon {
+    width: 20px;
+    height: 14px;
+}
+.LikeICon:hover {
+    fill: #ffffff;
+}
+
+
+.DislikeButton {
+    width: 14px;
+    height: 12px;
+    color: #696969;    
+    margin-left: 28.5px;
+}
+.DislikeButton:active {
+    fill: #696969;
+    cursor: pointer;
+    color: #696969;
+}
+.DislikeButton:hover {
+     cursor: pointer;
+    stroke: #ffffff;
+}
+

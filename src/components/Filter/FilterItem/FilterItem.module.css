@@ -1,0 +1,47 @@
+.FilterItem {
+    color: #ffffff;
+    display: none;
+}
+.FilterItem:hover {
+    color: #b672ff;
+    text-decoration: underline #b672ff;
+}
+.FilterItem:checked + label {
+    color: #b672ff;
+}
+
+
+.FilterItemsLabel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.FilterLabel {
+    margin-left: 10px;
+    margin-right: 19px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #ffffff;
+    cursor: pointer;
+}.FilterLabelLight {
+    margin-left: 10px;
+    margin-right: 19px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+    cursor: pointer;
+}
+.FilterLabel:hover {
+    color: #b672ff;
+    text-decoration: underline;
+}
+.FilterLabelLight:hover {
+    color: #b672ff;
+    text-decoration: underline;
+}
+

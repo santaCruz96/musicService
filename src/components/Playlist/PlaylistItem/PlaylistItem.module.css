@@ -1,0 +1,178 @@
+.PlaylistItem {
+    width: 100%;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.Track {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.TrackTitle {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 447px;
+    overflow: hidden;
+}
+
+.TrackImageWrapper {
+    position: relative;
+    width: 51px;
+    margin-right: 17px;
+    overflow: hidden;
+}
+
+.TrackIconWrapper {
+    width: 51px;
+    height: 51px;
+    padding: 16px;
+    background-color: #313131;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 17px;
+    transition: background-color 0.5s ease;
+}
+.TrackIconWrapperLight {
+    width: 51px;
+    height: 51px;
+    padding: 16px;
+    background-color: #f6f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 17px;
+    transition: background-color 0.5s ease;
+}
+
+.TrackIconImage {
+    width: 18px;
+    height: 17px;
+    fill: transparent;
+    color: #4e4e4e;
+}
+
+.TrackTitleText {
+    position: relative;
+    width: 371px;
+    overflow: hidden;
+}
+
+.TrackTitleLink {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #ffffff;
+}
+.TrackTitleLinkLight {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+}
+
+.TrackTitleSpan {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #4e4e4e;
+}
+.TrackTitleSpanLight {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #B1B1B1;
+}
+
+.TrackAuthor {
+    position: relative;
+    width: 321px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #ffffff;
+    text-align: left;
+}
+.TrackAuthorLight {
+    position: relative;
+    width: 321px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+    text-align: left;
+}
+
+.TrackAlbum {
+    position: relative;
+    width: 245px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #696969;
+}
+.TrackAlbumLight {
+    position: relative;
+    width: 245px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #B1B1B1;
+}
+
+.TrackTime {
+    position: relative;
+    width: 61px;
+    overflow: hidden;
+}
+
+.TrackTimeWrapper {
+    display: flex;
+    align-items: baseline;
+}
+
+.TrackLikeIconWrapper {
+    width: 14px;
+    height: 12px;
+    margin-right: 17px;
+    color: #696969;
+}
+.TrackLikeIcon {
+    width: 14px;
+    height: 12px;
+    stroke: #696969;
+    cursor: pointer;
+}
+.TrackLikeIcon:hover {
+    stroke: #ffffff
+}
+
+.TrackTimeText {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: right;
+    color: #696969;
+}
+.TrackTimeTextLight {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: right;
+    color: #B1B1B1;
+}

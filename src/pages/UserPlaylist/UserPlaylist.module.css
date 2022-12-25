@@ -1,0 +1,127 @@
+.CenterBlock {
+    width: auto;
+    flex-grow: 3;
+    padding: 20px 40px 20px 40px;
+}
+
+.CenterBlockContent {
+    display: flex;
+    flex-direction: column;
+}
+
+.CenterBlockTitle {
+    margin-bottom: 45px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 72px;
+    letter-spacing: -0.8px;
+    color: #ffffff;
+}
+.CenterBlockTitleLight {
+    margin-bottom: 45px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 72px;
+    letter-spacing: -0.8px;
+    color: #000000;
+}
+
+.TitleWrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.PlaylistTitles {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 2px;
+    color: rgba(105, 105, 105);
+    text-transform: uppercase;
+}
+
+.TitleTrack {
+    width: 38%;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 2px;
+    color: rgba(105, 105, 105);
+    text-transform: uppercase;
+}
+
+.TitleAuthor {
+    width: 321px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 2px;
+    color: rgba(105, 105, 105);
+    text-transform: uppercase;
+}
+
+.TitleAlbum {
+    width: 245px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 2px;
+    color: rgba(105, 105, 105);
+    text-transform: uppercase;
+}
+
+.TitleTrackLight {
+    width: 38%;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 2px;
+    color: #B1B1B1;
+    text-transform: uppercase;
+}
+
+.TitleAuthorLight {
+    width: 321px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 2px;
+    color: #B1B1B1;
+    text-transform: uppercase;
+}
+
+.TitleAlbumLight {
+    width: 245px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 2px;
+    color: #B1B1B1;
+    text-transform: uppercase;
+}
+
+.TitleTime {
+    width: 60px;
+    text-align: end;
+}
+
+.WatchIcon {
+    width: 12px;
+    height: 17px;
+    color: rgba(105, 105, 105);
+    background-color: transparent;
+}

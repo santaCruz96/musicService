@@ -1,0 +1,10 @@
+.PlaylistContent {
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    max-height: 64vh;
+}
+.PlaylistContent::-webkit-scrollbar {
+    display: none;
+}
+

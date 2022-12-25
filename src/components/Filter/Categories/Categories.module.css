@@ -1,0 +1,61 @@
+.FilterButton {
+    position: relative;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    border: 1px solid #FFFFFF;
+    border-radius: 60px;
+    padding: 6px 20px;
+    cursor: pointer;
+}
+.FilterButtonLight {
+    position: relative;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    border: 1px solid #000000;
+    color:#000000;
+    border-radius: 60px;
+    padding: 6px 20px;
+    cursor: pointer;
+}
+.FilterButton:hover, .FilterButtonLight:hover {
+    border-color: #d9b6ff;
+    color: #d9b6ff;
+}
+.FilterButton:active {
+    border-color: #ad61ff;
+    color: #ad61ff;
+    cursor: pointer;
+}
+.FilterButtonActive {
+    border: 1px solid #9A48F1;
+    color: #B672FF;
+}
+
+
+.FilterButtonCount {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 26px;
+    height: 25.5px;
+    text-align: center;
+    color: #ffffff;
+    background: #ad61ff;
+    border-radius: 50%;
+}
+
+.FilterButtonCountLight {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 26px;
+    height: 25.5px;
+    text-align: center;
+    color: #000000;
+    background: #ad61ff;
+    border-radius: 50%;
+}

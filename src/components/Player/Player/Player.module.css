@@ -1,0 +1,28 @@
+.ContentWrapper {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    background-color: #181818;
+    transition: background-color, 0.5s ease;
+}
+.ContentWrapperLight {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    transition: background-color, 0.5s ease;
+}
+
+.PlayerBlock {
+    height: 73px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.BarPlayer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
