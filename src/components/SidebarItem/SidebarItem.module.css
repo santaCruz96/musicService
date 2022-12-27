@@ -1,0 +1,18 @@
+.SidebarItem {
+    position: relative;
+    width: 250px;
+    height: 150px;
+    background-color: #313131;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.SidebarImage { 
+    width: 100%;
+    height: auto;
+}
+
+.Skeleton {
+    width: 100%;
+    height: auto;
+}

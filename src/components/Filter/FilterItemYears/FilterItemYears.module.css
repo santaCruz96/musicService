@@ -1,0 +1,31 @@
+.FilterItemsYearWrapper {
+    display: flex;
+}
+
+.FilterItemsYearLabel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.FilterYearLabel {
+    margin-left: 10px;
+    margin-right: 19px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.FilterYearLabelLight {
+    margin-left: 10px;
+    margin-right: 19px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: #000000;
+    cursor: pointer;
+}

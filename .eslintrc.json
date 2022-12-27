@@ -20,7 +20,18 @@
         "react"
     ],
     "rules": {
+        "camelcase": ["error", {"allow": ["track_file", "duration_in_seconds", "stared_user", "release_date"]}],
+        "no-plusplus": "off",
         "no-shadow": "off",
+        "jsx-a11y/label-has-associated-control": "off",
+        "prefer-destructuring": ["error", {
+            "AssignmentExpression": {
+              "array": false,
+              "object": false
+            }
+        }],
+        "import/prefer-default-export": "off",
+        "no-param-reassign": 0,
         "jsx-a11y/media-has-caption": [ 2, {
             "audio": [ "Audio" ],
             "video": [ "Video" ],

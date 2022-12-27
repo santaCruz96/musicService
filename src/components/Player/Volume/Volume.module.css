@@ -1,0 +1,94 @@
+.VolumeWrapper {
+    width: auto;
+    display: flex;
+    align-items: center;
+    padding: 0 92px 0 0;
+}
+
+.VolumeContent {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.ImageWrapper {
+    width: 13px;
+    height: 18px;
+    margin-right: 17px;
+}
+
+.VolumeIcon {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    color: #d9d9d9;
+}
+
+.ProgressWrapper {
+    width: 109px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.ProgressLine {
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.ProgressLine::-ms-track {
+    width: 100%;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+}
+.ProgressLine::-webkit-slider-thumb {
+    appearance: none;
+    background: #1a1a1a;
+    border: 2px solid #ffffff;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: -6px;
+}
+.ProgressLine::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 0;
+    border: 2px solid #797979;
+    background: #ffffff;
+    border-radius: 2px;
+}
+
+.ProgressLineLight {
+    appearance: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.ProgressLineLight::-ms-track {
+    width: 100%;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+}
+.ProgressLineLight::-webkit-slider-thumb {
+    appearance: none;
+    background: #ffffff;
+    border: 2px solid #1a1a1a;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: -6px;
+}
+.ProgressLineLight::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 0;
+    border: 2px solid #57459d;
+    background: #57459d;
+    border-radius: 2px;
+}

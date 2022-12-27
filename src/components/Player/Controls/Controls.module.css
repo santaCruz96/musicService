@@ -1,0 +1,89 @@
+.ControlsWrapper {
+    display: flex;
+    flex-direction: row;
+    padding-left: 34px;
+}
+
+.PlayerButton {
+    padding: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.PrevIconWrapper {
+    width: 15px;
+    height: 14px;
+    margin-right: 23px;
+    cursor: pointer;
+    color: #d9d9d9;
+}
+.PrevIcon {
+    width: 15px;
+    height: 14px;
+}
+
+
+.PlayIconWrapper {
+    width: 22px;
+    height: 20px;
+    margin-right: 12px;
+    cursor: pointer;
+    color: #d9d9d9;
+}
+.PlayIcon {
+    width: 22px;
+    height: 20px;
+}
+
+.NextIconWrapper {
+    width: 15px;
+    height: 14px;
+    margin-right: 28px;
+    cursor: pointer;
+    color: #d9d9d9;
+}
+.NextIcon {
+    width: 15px;
+    height: 14px; 
+}
+
+.RepeatIconWrapper {
+    width: 18px;
+    height: 12px;
+    fill: transparent;
+    margin-right: 24px;
+    cursor: pointer;
+}
+.RepeatIconWrapper:hover {
+    stroke: #acacac;
+}
+.RepeatIconWrapper:active {
+    fill: #696969;
+    cursor: pointer;
+    color: #696969;
+}
+.RepeatIcon {
+    width: 20px;
+    height: 14px;
+}
+
+.ShuffleIconWrapper {
+    width: 19px;
+    height: 12px;
+    fill: transparent;
+    margin-right: 24px;
+    cursor: pointer;
+}
+.ShuffleIconWrapper:hover {
+    stroke: #acacac;
+}
+.ShuffleIconWrapper:active {
+    fill: #696969;
+    cursor: pointer;
+    color: #696969;
+}
+.ShuffleIcon {
+    width: 20px;
+    height: 14px;
+}
+

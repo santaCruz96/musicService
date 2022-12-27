@@ -1,0 +1,94 @@
+.Container {
+    max-width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+.FormWrapper {
+    position: absolute;
+    z-index: 2;
+    left: calc(50% - (366px / 2));
+    top: calc(50% - (439px / 2));
+    opacity: 1;
+}
+
+.Form {
+    width: 366px;
+    height: 439px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 35px 40px;
+    background-color: white;
+    border-radius: 12px;
+}
+
+.Input {
+    width: 278px;
+    font-family: inherit;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.05px;
+    border: 0;
+    border-bottom: 1px rgba(208, 206, 206) solid;
+    outline: none;
+    padding: 8px 1px;
+    margin: 15px 0px 20px;
+}
+.Input:not(:last-child) {
+    margin-bottom: 10px;
+    }
+
+.Input::placeholder {
+    color: rgba(208, 206, 206);
+}
+
+.LoginButton {
+    width: 278px;
+    height: 52px;
+    font-family: inherit;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.05px;
+    color: white;
+    background-color: rgba(88, 14, 162);
+    border-radius: 6px;
+    border: 0;
+    cursor: pointer;
+    margin: 50px 10px 20px;
+}
+.LoginButton:hover {
+    background-color: rgb(64 8 120);
+}
+.LoginButton:active {
+    background-color: rgb(43 10 77);
+}
+
+.SignupButton {
+    width: 278px;
+    height: 52px;
+    font-family: inherit;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.05px;
+    background-color: transparent;
+    border: 1px rgba(208, 206, 206) solid;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.Logo {
+    width: 140px;
+    height: 21px;
+    margin-bottom: 24px;
+    background-color: transparent;
+}
