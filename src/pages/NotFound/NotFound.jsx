@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router-dom'
 import Search from '../../components/Search/Search'
 import smile from '../../img/smile_crying.png'
 import style from './NotFound.module.css'
-import useTheme from '../../components/Context-hook/UseTheme'
+import useTheme from '../../components/context-hook/UseTheme'
 
 function NotFound() {
     const navigate = useNavigate()

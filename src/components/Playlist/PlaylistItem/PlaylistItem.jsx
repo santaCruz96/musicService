@@ -1,12 +1,12 @@
 import { useDispatch } from 'react-redux'
 import { getTrackId, play } from '../../../store/slices/playerSlice'
 import style from './PlaylistItem.module.css'
-import Icons from '../../Icons/Icons'
+import Icons from '../../icons/Icons'
 import {
     useAddFavoriteTrackMutation,
     useDeleteFavoriteTrackMutation,
 } from '../../../api/musicApi'
-import useTheme from '../../Context-hook/UseTheme'
+import useTheme from '../../context-hook/UseTheme'
 
 function PlaylistItem({
     id,

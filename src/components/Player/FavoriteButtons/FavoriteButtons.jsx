@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux'
-import Icons from '../../Icons/Icons'
+import Icons from '../../icons/Icons'
 import {
     useAddFavoriteTrackMutation,
     useDeleteFavoriteTrackMutation,

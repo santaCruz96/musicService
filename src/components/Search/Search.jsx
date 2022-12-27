@@ -1,8 +1,8 @@
 import { useDispatch } from 'react-redux'
 import { search } from '../../store/slices/searchSlice'
 import style from './Search.module.css'
-import Icons from '../Icons/Icons'
-import useTheme from '../Context-hook/UseTheme'
+import Icons from '../icons/Icons'
+import useTheme from '../context-hook/UseTheme'
 
 function Search() {
     const {isLight} = useTheme()

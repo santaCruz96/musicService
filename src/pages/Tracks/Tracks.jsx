@@ -3,8 +3,8 @@ import Filter from '../../components/Filter/Filter/Filter'
 import Playlist from '../../components/Playlist/Playlist/Playlist'
 import Sidebar from '../../components/Sidebar/Sidebar'
 import style from './Tracks.module.css'
-import Icons from '../../components/Icons/Icons'
-import useTheme from '../../components/Context-hook/UseTheme'
+import Icons from '../../components/icons/Icons'
+import useTheme from '../../components/context-hook/UseTheme'
 
 function Tracks() {
     const { isLight } = useTheme()

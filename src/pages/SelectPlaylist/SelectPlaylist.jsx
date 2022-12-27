@@ -2,8 +2,8 @@ import { useParams } from 'react-router-dom'
 import Search from '../../components/Search/Search'
 import SelectPlaylistContent from '../../components/Playlist/SelectPlaylistContent/SelectPlaylistContent'
 import style from './SelectPlaylist.module.css'
-import Icons from '../../components/Icons/Icons'
-import useTheme from '../../components/Context-hook/UseTheme'
+import Icons from '../../components/icons/Icons'
+import useTheme from '../../components/context-hook/UseTheme'
 
 function SelectPlaylist() {
     const {isLight} = useTheme()

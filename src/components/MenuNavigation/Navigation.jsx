@@ -1,12 +1,12 @@
 import { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { NavLink } from 'react-router-dom'
-import useTheme from '../Context-hook/UseTheme'
+import useTheme from '../context-hook/UseTheme'
 import { setLogout } from '../../store/slices/authSlice'
 import style from './Navigation.module.css'
 import logo from '../../img/logo.png'
 import logoBlack from '../../img/logoBlack.png'
-import Icons from '../Icons/Icons'
+import Icons from '../icons/Icons'
 
 function Navigation() {
     const [menuShown, setMenuShown] = useState(false)

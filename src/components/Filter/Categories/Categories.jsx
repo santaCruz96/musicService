@@ -1,5 +1,5 @@
 import style from "./Categories.module.css"
-import useTheme from '../../Context-hook/UseTheme'
+import useTheme from '../../context-hook/UseTheme'
 
 function Categories({ text, isActive, count }) {
     const {isLight} = useTheme()

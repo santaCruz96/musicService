@@ -1,8 +1,8 @@
 import Search from '../../components/Search/Search'
 import FavoritePlaylistContent from '../../components/Playlist/FavoritePlaylistContent/FavoritePlaylistContent'
 import style from './UserPlaylist.module.css'
-import Icons from '../../components/Icons/Icons'
-import useTheme from '../../components/Context-hook/UseTheme'
+import Icons from '../../components/icons/Icons'
+import useTheme from '../../components/context-hook/UseTheme'
 
 function UserPlaylist() {
     const { isLight } = useTheme()

@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router-dom'
 import Navigation from '../../MenuNavigation/Navigation'
 import style from './NavLayout.module.css'
-import useTheme from '../../Context-hook/UseTheme'
+import useTheme from '../../context-hook/UseTheme'
 
 function NavLayout() {
     const {isLight} = useTheme()

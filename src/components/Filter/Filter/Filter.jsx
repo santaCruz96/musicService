@@ -3,7 +3,7 @@ import { useState } from 'react'
 import Categories from '../Categories/Categories'
 import FilterItem from '../FilterItem/FilterItem'
 import FilterItemYears from '../FilterItemYears/FilterItemYears'
-import useTheme from '../../Context-hook/UseTheme'
+import useTheme from '../../context-hook/UseTheme'
 import {
     addFilterByAuthor,
     addFilterByGenre,
