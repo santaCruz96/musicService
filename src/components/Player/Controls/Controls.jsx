@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import Icons from '../../Icons/Icons'
+import Icons from '../../icons/Icons'
 import {
     getTrackId,
     play,
@@ -11,7 +11,7 @@ import {
     sortTracks,
 } from '../../../store/slices/playerSlice'
 import style from './Controls.module.css'
-import useTheme from '../../Context-hook/UseTheme'
+import useTheme from '../../context-hook/UseTheme'
 
 function Controls({ track }) {
     const {isLight} = useTheme()

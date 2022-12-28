@@ -5,7 +5,7 @@ import { BrowserRouter } from 'react-router-dom'
 import store from './store/store'
 import Routes from './components/Routes/Routes'
 import "./index.css"
-import ThemeProvider from './components/Contexts/ThemeProvider'
+import ThemeProvider from './components/contexts/ThemeProvider'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(

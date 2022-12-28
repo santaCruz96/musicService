@@ -1,5 +1,5 @@
 import IconsSVG from '../../img/icon/sprite.svg';
-import useTheme from '../Context-hook/UseTheme';
+import useTheme from '../context-hook/UseTheme';
 
 function Icons({className,  name, onClick}) {
 

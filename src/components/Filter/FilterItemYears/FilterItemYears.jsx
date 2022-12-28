@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux'
 import { filterByYear } from '../../../store/slices/filterSlice'
 import style from './FilterItemYears.module.css'
-import useTheme from '../../Context-hook/UseTheme'
+import useTheme from '../../context-hook/UseTheme'
 
 function FilterItemYears() {
     const dispatch = useDispatch()

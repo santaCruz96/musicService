@@ -2,7 +2,7 @@ import { useRef, useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { play, getTrackId, playNextTrack } from '../../../store/slices/playerSlice'
 import style from './BarProgress.module.css'
-import useTheme from '../../Context-hook/UseTheme'
+import useTheme from '../../context-hook/UseTheme'
 
 function BarProgress({ track }) {
     const {isLight} = useTheme()

@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import Icons from '../../Icons/Icons'
+import Icons from '../../icons/Icons'
 import style from './Volume.module.css'
-import useTheme from '../../Context-hook/UseTheme'
+import useTheme from '../../context-hook/UseTheme'
 
 function Volume({ track }) {
     const {isLight} = useTheme()

@@ -1,10 +1,10 @@
 import { useSelector } from 'react-redux'
-import Icons from '../../Icons/Icons'
+import Icons from '../../icons/Icons'
 import FavoriteButtons from '../FavoriteButtons/FavoriteButtons'
 import { useGetTrackByIdQuery } from '../../../api/musicApi'
 import styleSkeleton from '../../TrackSkeletons/TrackSkeletons.module.css'
 import style from './Track.module.css'
-import useTheme from '../../Context-hook/UseTheme'
+import useTheme from '../../context-hook/UseTheme'
 
 function Track() {
     const {isLight} = useTheme()

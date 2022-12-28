@@ -7,7 +7,7 @@ import Volume from '../Volume/Volume'
 import BarProgress from '../BarProgress/BarProgress'
 import { getCurrentTrack } from '../../../store/slices/playerSlice'
 import style from './Player.module.css'
-import useTheme from '../../Context-hook/UseTheme'
+import useTheme from '../../context-hook/UseTheme'
 
 function Player() {
     const dispatch = useDispatch()

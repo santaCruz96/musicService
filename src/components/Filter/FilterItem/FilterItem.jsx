@@ -1,5 +1,5 @@
 import style from './FilterItem.module.css'
-import useTheme from '../../Context-hook/UseTheme'
+import useTheme from '../../context-hook/UseTheme'
 
 function FilterItem({ value, onClickFunction }) {
     const {isLight} = useTheme()
