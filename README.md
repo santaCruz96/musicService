@@ -105,7 +105,7 @@ Deploy [здесь](https://sky-music-app.netlify.app/login)
 1. Склонируйте репозиторий:
 
 ```
-$ git clone https://github.com/Yarengina/Music-app.git
+$ git clone https://github.com/santaCruz96/musicService.git
 ```
 
 2. Установите зависимости:
